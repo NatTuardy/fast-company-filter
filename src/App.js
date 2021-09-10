@@ -13,17 +13,12 @@ const App = () => {
   const [selectedProf, setSelectedProf] = useState();
   useEffect(() => {
     api.users.fetchAll().then((date) => setUsers(date));
+    api.professions.fetchAll().then((date) => setProfessions(date));
   }, []);
 
   useEffect(() => {
-    // const newArr = users.map((user) => ({ ...user, status: false }));
-    // setUsers(newArr);
-    api.professions.fetchAll().then((date) => setProfessions(date));
-  }, []);
-  useEffect(() => {
     setCurrentPage(1);
   }, [selectedProf]);
-  // console.log(professions);
   const handleDelete = (userId) => {
     setUsers(users.filter((user) => user._id !== userId));
   };
@@ -37,7 +32,6 @@ const App = () => {
 
   const handleProfessionsSelect = (item) => {
     setSelectedProf(item);
-    console.log(item);
   };
 
   // pagination
@@ -45,9 +39,16 @@ const App = () => {
   const handleChangePage = (page) => {
     setCurrentPage(page);
   };
-  const filterUsers = selectedProf ? users.filter((user) => user.profession === selectedProf) : users;
-  const lengthUser = filterUsers.length;
-  const userCrop = paginate(filterUsers, currentPage, pageSize);
+  let filterUsers;
+  let lengthUser;
+  let userCrop;
+  if (users) {
+    filterUsers = selectedProf ? users.filter((user) => {
+      return user.profession.name === selectedProf.name;
+    }) : users;
+    lengthUser = filterUsers.length;
+    userCrop = paginate(filterUsers, currentPage, pageSize);
+  }
   const clearFilter = () => {
     setSelectedProf();
   };
@@ -106,7 +107,7 @@ const App = () => {
 
   return (
     <div>
-      {users.length === 0 ? (
+      {!users ? (
         <h4>
           <span className="badge m-2 h-12 bg-danger">
             Никто не тусанет с тобой сегодня
