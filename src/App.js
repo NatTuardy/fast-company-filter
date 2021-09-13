@@ -43,9 +43,16 @@ const App = () => {
   let lengthUser;
   let userCrop;
   if (users) {
-    filterUsers = selectedProf ? users.filter((user) => {
-      return user.profession.name === selectedProf.name;
-    }) : users;
+    if (Array.isArray(professions)) {
+      filterUsers = selectedProf ? users.filter((user) => {
+        return user.profession.name === selectedProf.name;
+      }) : users;
+    } else {
+      filterUsers = selectedProf ? users.filter((user) => {
+        console.log("user:", user.profession, "select:", selectedProf, JSON.stringify(user.profession) === JSON.stringify(selectedProf));
+        return JSON.stringify(user.profession) === JSON.stringify(selectedProf);
+      }) : users;
+    }
     lengthUser = filterUsers.length;
     userCrop = paginate(filterUsers, currentPage, pageSize);
   }
