@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/fast-company-filter/static/css/main.4a4137e4.chunk.css",
+    "main.js": "/fast-company-filter/static/js/main.ee49f8c8.chunk.js",
+    "main.js.map": "/fast-company-filter/static/js/main.ee49f8c8.chunk.js.map",
+    "runtime-main.js": "/fast-company-filter/static/js/runtime-main.d3b976ee.js",
+    "runtime-main.js.map": "/fast-company-filter/static/js/runtime-main.d3b976ee.js.map",
+    "static/css/2.983f79de.chunk.css": "/fast-company-filter/static/css/2.983f79de.chunk.css",
+    "static/js/2.b5395647.chunk.js": "/fast-company-filter/static/js/2.b5395647.chunk.js",
+    "static/js/2.b5395647.chunk.js.map": "/fast-company-filter/static/js/2.b5395647.chunk.js.map",
+    "static/js/3.1b00c13b.chunk.js": "/fast-company-filter/static/js/3.1b00c13b.chunk.js",
+    "static/js/3.1b00c13b.chunk.js.map": "/fast-company-filter/static/js/3.1b00c13b.chunk.js.map",
+    "index.html": "/fast-company-filter/index.html",
+    "static/css/2.983f79de.chunk.css.map": "/fast-company-filter/static/css/2.983f79de.chunk.css.map",
+    "static/css/main.4a4137e4.chunk.css.map": "/fast-company-filter/static/css/main.4a4137e4.chunk.css.map",
+    "static/js/2.b5395647.chunk.js.LICENSE.txt": "/fast-company-filter/static/js/2.b5395647.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3b976ee.js",
+    "static/css/2.983f79de.chunk.css",
+    "static/js/2.b5395647.chunk.js",
+    "static/css/main.4a4137e4.chunk.css",
+    "static/js/main.ee49f8c8.chunk.js"
+  ]
+}
